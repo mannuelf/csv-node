@@ -1,0 +1,7 @@
+{
+  "name": "csv-node",
+  "version": "1.0.0",
+  "main": "index.js",
+  "author": "Mannuel Ferreira <mannuel.ferreira@gmail.com>",
+  "license": "MIT"
+}
