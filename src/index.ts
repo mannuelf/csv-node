@@ -1,5 +1,12 @@
 import fs from 'fs';
 
+// enum - enumeration
+enum MatchResult {
+  HomeWin = 'H',
+  AwayWin = 'A',
+  Draw = 'D',
+}
+
 const matches = fs
   .readFileSync('football.csv', {
     encoding: 'utf-8',
@@ -8,12 +15,6 @@ const matches = fs
   .map((row: string): string[] => {
     return row.split(',');
   });
-
-const MatchResult = {
-  HomeWin: 'H',
-  AwayWin: 'A',
-  Draw: 'D',
-};
 
 let manUnitedWins = 0;
 
