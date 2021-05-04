@@ -1,16 +1,15 @@
 import fs from 'fs';
-import { MatchResult } from './matchResult';
 
-type MatchData = [Date, string, string, number, number, MatchResult, string];
-
-// abstract class, cannot be used to create an instance of an object
-// abstract methods must be implimented by a child class
-export abstract class CsvFileReader {
-  data: MatchData[] = [];
+/*
+ * abstract class, cannot be used to create an instance of an object
+ * abstract methods must be implimented by a child class
+ */
+export abstract class CsvFileReader<T> {
+  data: T[] = [];
 
   constructor(public filename: string) {}
 
-  abstract mapRow(row: string[]): MatchData;
+  abstract mapRow(row: string[]): T;
 
   read(): void {
     this.data = fs
@@ -23,5 +22,4 @@ export abstract class CsvFileReader {
       })
       .map(this.mapRow);
   }
-
 }
