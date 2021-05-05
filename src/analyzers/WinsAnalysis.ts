@@ -1,5 +1,5 @@
 import { MatchData } from '../MatchData';
-import { MatchResult } from '../matchResult';
+import { MatchResult } from '../MatchResult';
 import { Analyzer } from '../Summary';
 
 export class WinsAnalysis implements Analyzer {

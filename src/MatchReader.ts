@@ -1,5 +1,5 @@
 import { dateStringToDate } from './utils';
-import { MatchResult } from './matchResult';
+import { MatchResult } from './MatchResult';
 import { MatchData } from './MatchData';
 
 interface DataReader {
